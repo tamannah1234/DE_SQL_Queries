@@ -1,0 +1,26 @@
+-- Online SQL Editor to Run SQL Online.
+-- Use the editor to create new tables, insert data and all other SQL operations.
+  
+  --SELECT first_name, age,
+  --CASE
+   --When age >=18 THEN 'Adult'
+   --When age <18 THEN 'Teenager'
+   --Else 'Senior Citizen'
+   --End as 'Status'
+   --FROM Customers;
+   
+   SELECT order_id, customer_id,item,
+   CASE
+   When amount >1000 Then 'delivering today'
+   When amount <=1000 AND amount>=800 Then 'delivering tomorrow'
+   Else 'delivering within 2 days'
+   End as 'order_status'
+   
+FROM Orders
+
+Where (item ='Keyboard') OR (item = 'Mouse') OR (item='Mousepad')
+
+   
+
+
+
